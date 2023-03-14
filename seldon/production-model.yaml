@@ -2,7 +2,7 @@ apiVersion: machinelearning.seldon.io/v1alpha2
 kind: SeldonDeployment
 metadata:
   name: production-model
-  namespace: dognauts-reestr
+  namespace: dognauts-sup
 spec:
   predictors:
   - componentSpecs:
@@ -22,7 +22,7 @@ spec:
             initialDelaySeconds: 80
             periodSeconds: 5
             successThreshold: 1
-          name: production-model
+          name: model
           readinessProbe:
             failureThreshold: 200
             httpGet:
@@ -42,7 +42,7 @@ spec:
     graph:
       envSecretRefName: seldon-secret
       implementation: MLFLOW_SERVER
-      modelUri: s3://dognauts-reestr/1/47db4c6029b648afa1726dbc6998bfb1/artifacts/model
-      name: production-model
-    name: production-model
+      modelUri: s3://dognauts-sup/1/ac30f0247df84ab9838c816dce15937a/artifacts/model
+      name: model
+    name: model
     replicas: 1
