@@ -42,7 +42,7 @@ spec:
     graph:
       envSecretRefName: seldon-secret
       implementation: MLFLOW_SERVER
-      modelUri: s3://dognauts-sup/1/ac30f0247df84ab9838c816dce15937a/artifacts/model
+      modelUri: s3://dognauts-sup/1/8747055ef330491c9aae0d400e5b5c3b/artifacts/model
       name: model
     name: model
     replicas: 1
